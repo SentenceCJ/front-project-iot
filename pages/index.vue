@@ -1,7 +1,7 @@
 <template>
-  <Navbar></Navbar>
+  
   <div class="pt-10 px-20 flex flex-col items-center">
-    
+    <Navbar/>
     <Accordeur
       class="mt-6"
       :rightValue="activeFrequency"
