@@ -1,6 +1,7 @@
 <template>
+  <Navbar></Navbar>
   <div class="pt-10 px-20 flex flex-col items-center">
-    <h1 class="font-semi-bold text-4xl">Accordeur de guitare</h1>
+    
     <Accordeur
       class="mt-6"
       :rightValue="activeFrequency"
@@ -20,10 +21,12 @@
 <script>
 import Accordeur from "../components/Accordeur";
 import frequencies from '../content/frequency.js'
+import Navbar from "../components/Navbar";
 
 export default {
   components: {
-    Accordeur
+    Accordeur,Navbar
+
   },
 
   data() {
