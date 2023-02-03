@@ -1,5 +1,12 @@
 <template>
-  <div class="py-10 px-8 text-neutral-400 mx-auto rounded mt-16 border-8 ring-8 ring-neutral-50 border-neutral-100 max-w-4xl">
+  <div>
+   <Navbartop/>
+   <GuitareImage/>
+  <div class="py-10 px-8 text-neutral-400 mx-auto rounded mt-16 border-8 ring-8 ring-neutral-50 
+  border-neutral-100 max-w-4xl " style="margin-top: 300px; margin-right: 600px;" >
+   
+    <section>
+      
     <div class="flex justify-between items-end">
       <h1 class="text-3xl font-bold text-neutral-400">Guitar Tuner</h1>
       <div class="flex space-x-5">
@@ -48,7 +55,13 @@
         </div>
       </div>
     </div>
+  
+    </section>
+    
   </div>
+
+<Footers/>
+</div>
 </template>
 
 <script>
@@ -56,6 +69,11 @@ import Accordeur from "../components/Accordeur";
 import GuitarView from "../components/GuitarView"
 import UserSetting from "../components/UserSetting"
 import MeterSelector from "../components/MeterSelector"
+import GuitareImage from "../components/guitareimage.vue"
+
+import Navbartop from "../components/navbartop";
+import Footers from "../components/footers.vue"
+
 
 import frequencies from '../content/frequency.js'
 import tunings from "../content/tuning"
@@ -68,6 +86,9 @@ export default {
     GuitarView,
     MeterSelector,
     UserSetting,
+    Navbartop,
+    Footers,
+    GuitareImage,
   },
 
   data() {
@@ -76,6 +97,8 @@ export default {
       tunings,
       activeFrequency: null,
       openSetting: false,
+      imageUrl: 'https://img.freepik.com/vecteurs-libre/vecteur-fond-motif-geometrique-blanc-or_53876-140726.jpg?t=st=1674806222~exp=1674806822~hmac=586183d650f633ee1b5ea0c14306eeff5e1c0ee8e3181ae13af5fbe1469ad9cf',
+     
     }
   },
 
@@ -99,3 +122,31 @@ export default {
   }
 }
 </script>
+
+
+<style>
+html { 
+  background: url(https://img.freepik.com/vecteurs-libre/vecteur-fond-motif-geometrique-blanc-or_53876-140726.jpg?t=st=1674806222~exp=1674806822~hmac=586183d650f633ee1b5ea0c14306eeff5e1c0ee8e3181ae13af5fbe1469ad9cf) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.ring-neutral-50 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(250 250 250 / var(--tw-ring-opacity));
+    
+    margin-top: 300px;
+    background-color: white;
+}
+
+.text-neutral-400 {
+    --tw-text-opacity: 1;
+    color: rgb(163 163 163 / var(--tw-text-opacity));
+    text-align: center;
+    margin-top: -100px;
+}
+
+
+</style>
